@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <UseWpf>true</UseWpf>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <ApplicationIcon>logobase.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NavigationModules\NavigationModules.csproj" />
+      <ProjectReference Include="..\ProjectRecord.Common\ProjectRecord.Common.csproj" />
+      <ProjectReference Include="..\ProjectRecord.Models\ProjectRecord.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Resources\loginbg.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="modules.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
