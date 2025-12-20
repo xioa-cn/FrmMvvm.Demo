@@ -30,7 +30,8 @@ public partial class LoginViewModel : ReactiveObject
     [RelayCommand]
     private void Login(LoginUser user)
     {
-        this.BindingControl?.SwitchWindow(_mainFrm, FormSwitchExtensions.AnimationType.SlideLeft);
+        this.BindingControl?.SwitchWindow(_mainFrm, FormSwitchExtensions.AnimationType.SlideLeft,
+            closeFrmAction: frm => frm.Visible = false);
     }
 
     private async Task Comm()
@@ -42,4 +43,3 @@ public partial class LoginViewModel : ReactiveObject
         }
     }
 }
-   

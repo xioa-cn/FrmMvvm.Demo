@@ -14,7 +14,7 @@ namespace WinformCore.Startup;
 [AutoFrmView(nameof(LoginFrm), registerType: typeof(Form))]
 public partial class LoginFrm : ViewModelFrm, IViewModelFrm<LoginViewModel>
 {
-    public LoginFrm(LoginViewModel login) : base(true, closeApplication: false)
+    public LoginFrm(LoginViewModel login) : base(true, closeApplication: true)
     {
         ViewModel = login;
         this.OnceLoaded(OnceLoaded);
@@ -31,6 +31,8 @@ public partial class LoginFrm : ViewModelFrm, IViewModelFrm<LoginViewModel>
             .BindingProperty(rememberPassword, cb => cb.Checked, vm => vm.RememberInfo);
 
         base.FrmBinding();
+        
+        
     }
 
 
