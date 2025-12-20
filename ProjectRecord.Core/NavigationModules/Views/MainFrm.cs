@@ -15,10 +15,6 @@ public partial class MainFrm : ViewModelFrm, IViewModelFrm<MainViewModel>
         this.ViewModel = mainViewModel;
         InitializeComponent();
         colorTheme.ValueChanged += ColorTheme_ValueChanged;
-        this.headerMenu.Items.Add(new MenuItem()
-        {
-            Text = "TEXST",
-        });
     }
 
     public override void FrmBinding()

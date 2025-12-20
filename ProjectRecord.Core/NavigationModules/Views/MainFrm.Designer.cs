@@ -36,14 +36,14 @@ partial class MainFrm
         colorTheme = new AntdUI.ColorPicker();
         btn_mode = new AntdUI.Button();
         panel1 = new AntdUI.Panel();
-        splitter1 = new AntdUI.Splitter();
         panel2 = new AntdUI.Panel();
-        headerMenu = new AntdUI.Menu();
+        pageHeader1 = new AntdUI.PageHeader();
+        splitter1 = new AntdUI.Splitter();
         titleBar.SuspendLayout();
         panel1.SuspendLayout();
+        panel2.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)splitter1).BeginInit();
         splitter1.SuspendLayout();
-        panel2.SuspendLayout();
         SuspendLayout();
         // 
         // titleBar
@@ -105,23 +105,10 @@ partial class MainFrm
         panel1.TabIndex = 1;
         panel1.Text = "panel1";
         // 
-        // splitter1
-        // 
-        splitter1.BackColor = System.Drawing.Color.Transparent;
-        splitter1.Cursor = System.Windows.Forms.Cursors.Default;
-        splitter1.Dock = System.Windows.Forms.DockStyle.Fill;
-        splitter1.Location = new System.Drawing.Point(0, 30);
-        splitter1.Name = "splitter1";
-        splitter1.Size = new System.Drawing.Size(800, 380);
-        splitter1.SplitterDistance = 200;
-        splitter1.SplitterWidth = 10;
-        splitter1.TabIndex = 1;
-        splitter1.Text = "splitter1";
-        // 
         // panel2
         // 
         panel2.Back = System.Drawing.Color.FromArgb(((int)((byte)0)), ((int)((byte)22)), ((int)((byte)119)), ((int)((byte)255)));
-        panel2.Controls.Add(headerMenu);
+        panel2.Controls.Add(pageHeader1);
         panel2.Dock = System.Windows.Forms.DockStyle.Top;
         panel2.Location = new System.Drawing.Point(0, 0);
         panel2.Name = "panel2";
@@ -129,17 +116,29 @@ partial class MainFrm
         panel2.TabIndex = 0;
         panel2.Text = "panel2";
         // 
-        // headerMenu
+        // pageHeader1
         // 
-        headerMenu.BackColor = System.Drawing.Color.Transparent;
-        headerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-        headerMenu.Location = new System.Drawing.Point(0, 0);
-        headerMenu.Mode = AntdUI.TMenuMode.Horizontal;
-        headerMenu.Name = "headerMenu";
-        headerMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-        headerMenu.Size = new System.Drawing.Size(800, 30);
-        headerMenu.TabIndex = 0;
-        headerMenu.Text = "menu1";
+        pageHeader1.DividerColor = System.Drawing.Color.FromArgb(((int)((byte)18)), ((int)((byte)107)), ((int)((byte)230)));
+        pageHeader1.Dock = System.Windows.Forms.DockStyle.Fill;
+        pageHeader1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
+        pageHeader1.ForeColor = System.Drawing.Color.IndianRed;
+        pageHeader1.Location = new System.Drawing.Point(0, 0);
+        pageHeader1.Name = "pageHeader1";
+        pageHeader1.Size = new System.Drawing.Size(800, 30);
+        pageHeader1.TabIndex = 0;
+        pageHeader1.Text = "页头";
+        // 
+        // splitter1
+        // 
+        splitter1.Cursor = System.Windows.Forms.Cursors.Default;
+        splitter1.Dock = System.Windows.Forms.DockStyle.Fill;
+        splitter1.Location = new System.Drawing.Point(0, 30);
+        splitter1.Margin = new System.Windows.Forms.Padding(0);
+        splitter1.Name = "splitter1";
+        splitter1.Size = new System.Drawing.Size(800, 380);
+        splitter1.SplitterDistance = 266;
+        splitter1.TabIndex = 1;
+        splitter1.Text = "splitter1";
         // 
         // MainFrm
         // 
@@ -155,20 +154,20 @@ partial class MainFrm
         Text = "MainFrm";
         titleBar.ResumeLayout(false);
         panel1.ResumeLayout(false);
+        panel2.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)splitter1).EndInit();
         splitter1.ResumeLayout(false);
-        panel2.ResumeLayout(false);
         ResumeLayout(false);
     }
+
+    private AntdUI.Splitter splitter1;
+
+    private AntdUI.PageHeader pageHeader1;
 
     private AntdUI.ColorPicker colorTheme;
 
     private AntdUI.Button btn_mode;
 
-    private AntdUI.Menu headerMenu;
-
-
-    private AntdUI.Splitter splitter1;
 
     private AntdUI.Panel panel2;
 
