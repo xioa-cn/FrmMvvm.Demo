@@ -4,8 +4,7 @@ namespace WinformCore.Models.Configs;
 
 public class AppSettings
 {
-    public object Logging { get; set; }
-    public string AppName { get; set; }
-    public DbType DbType { get; set; }
-    public string DbConnectString { get; set; }
+    public required object Logging { get; set; }
+    public required string AppName { get; set; }
+    public required DbSettings DbSetting { get; set; }
 }

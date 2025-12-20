@@ -51,7 +51,7 @@ public abstract class EfDataContext : DbContext
 
     protected void UseDbType(DbContextOptionsBuilder optionsBuilder, string connectionString)
     {
-        if (AppSettings.DbType == DbType.MySql)
+        if (AppSettings.DbSetting.DbType == DbType.MySql)
         {
             // 指定 MySQL 版本
             var serverVersion = ServerVersion.AutoDetect(connectionString);
@@ -64,7 +64,7 @@ public abstract class EfDataContext : DbContext
                     errorNumbersToAdd: null); // 需要重试的错误码
             });
         }
-        else if (AppSettings.DbType == DbType.PgSql)
+        else if (AppSettings.DbSetting.DbType == DbType.PgSql)
         {
             // PostgreSQL配置
             optionsBuilder.UseNpgsql(connectionString, options =>
@@ -79,12 +79,12 @@ public abstract class EfDataContext : DbContext
                 // options.CommandTimeout(30);
             });
         }
-        else if (AppSettings.DbType == DbType.Mssql)
+        else if (AppSettings.DbSetting.DbType == DbType.Mssql)
         {
             // SQL Server配置
             optionsBuilder.UseSqlServer(connectionString);
         }
-        else if (AppSettings.DbType == DbType.Sqlite)
+        else if (AppSettings.DbSetting.DbType == DbType.Sqlite)
         {
             optionsBuilder.UseSqlite(connectionString);
         }

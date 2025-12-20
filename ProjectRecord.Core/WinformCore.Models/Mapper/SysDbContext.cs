@@ -6,7 +6,7 @@ namespace WinformCore.Models.Mapper;
 
 public class SysDbContext : EfDataContext
 {
-    protected override string ConnectionString => AppSettings.DbConnectString;
+    protected override string ConnectionString => AppSettings.DbSetting.DbConnectString;
     protected override AppSettings AppSettings { get; }
 
 
