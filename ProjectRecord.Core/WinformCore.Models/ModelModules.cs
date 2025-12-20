@@ -12,6 +12,12 @@ public class ModelModules : AutoModule<ModelModules>
         base.OnInitialized(serviceProvider);
 
         var db = serviceProvider.GetService(typeof(SysDbContext)) as SysDbContext;
+
+        if (db is null)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(nameof(SysDbContext));
+        }
+
         db?.Database.EnsureCreated();
     }
 }
