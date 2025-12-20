@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/common/">
+    <Project Path="WinformCore.Common/WinformCore.Common.csproj" />
+    <Project Path="WinformCore.Models/WinformCore.Models.csproj" />
+  </Folder>
+  <Folder Name="/modules/">
+    <Project Path="NavigationModules/NavigationModules.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="WinformCore.Startup/WinformCore.Startup.csproj" />
+  </Folder>
+</Solution>
