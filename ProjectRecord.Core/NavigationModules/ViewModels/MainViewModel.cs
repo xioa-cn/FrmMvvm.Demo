@@ -1,6 +1,6 @@
-﻿using ProjectRecord.Common.Attribute;
-using ProjectRecord.Common.Services;
-using ProjectRecord.Models.Configs;
+﻿using WinformCore.Common.Attribute;
+using WinformCore.Common.Services;
+using WinformCore.Models.Configs;
 
 namespace NavigationModules.ViewModels;
 

@@ -9,14 +9,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\WinformCore.Common\WinformCore.Common.csproj" />
-      <ProjectReference Include="..\ProjectRecord.Models\ProjectRecord.Models.csproj" />
-      <ProjectReference Include="..\WinformCore.Models\WinformCore.Models.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Views\MainFrm.cs">
-        <SubType>Form</SubType>
-      </Compile>
     </ItemGroup>
 
 </Project>

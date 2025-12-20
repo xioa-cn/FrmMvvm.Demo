@@ -1,8 +1,8 @@
 ﻿using NavigationModules.ViewModels;
-using ProjectRecord.Common.Services;
+using WinformCore.Common.Services;
 using System.ComponentModel;
-using ProjectRecord.Common.Attribute;
-using ProjectRecord.Common.Extensions;
+using WinformCore.Common.Attribute;
+using WinformCore.Common.Extensions;
 using MenuItem = AntdUI.MenuItem;
 
 namespace NavigationModules.Views;

@@ -2,13 +2,18 @@
 using WinformCore.Common.Attribute;
 using WinformCore.Common.Services;
 
-namespace NavigationModules;
+namespace WinformCore.Startup;
 
-[Module(nameof(NavigationModule))]
-public class NavigationModule : AutoModule<NavigationModule>
+[Module(nameof(WinformCore))]
+public class StartupModule : AutoModule<StartupModule>
 {
     public override void Register(IServiceCollection serviceCollection)
     {
         base.Register(serviceCollection);
+    }
+
+    public override void OnInitialized(IServiceProvider serviceProvider)
+    {
+        base.OnInitialized(serviceProvider);
     }
 }
